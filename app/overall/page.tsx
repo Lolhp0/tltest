@@ -1,6 +1,6 @@
 "use client"
 
-import { Header, Main } from "@/components";
+import { Header, Main, Overall } from "@/components";
 import { t1Players } from "@/constants";
 import { getAllUsers } from "@/utils";
 import Image from "next/image";
@@ -66,7 +66,8 @@ const [view, setView] = useState(false);
     <div className="w-[inherit] bg-gradient-to-b from-[#1a1c2c] to-[#2d3047] max-md:w-full">
       <div className="w-[inherit] min-h-dvh m-auto font-nunito">
         <Header value={searchValue} setValue={(arg: string) => setSearchValue(arg)} searchPlayer={(name: string) => searchForPlayer(name)}/>
-        <Main profile={profile} setProfile={setProfile} view={view} setView={setView}/>
+        {/* <Main profile={profile} setProfile={setProfile} view={view} setView={setView}/> */}
+        <Overall profile={profile} setProfile={setProfile} view={view} setView={setView} />
 
         <div ref={lastElement} className="h-[200px] w-full"></div>
         <div className={`hidden w-24 h-24 fixed bottom-0 left-0 ${isIntersecting ? "!flex" : ""} z-[99999] items-center justify-center`}>

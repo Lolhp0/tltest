@@ -2,32 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: var(--font-nunito);
+}
+html,body {
+  min-width: 1652px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.__header__ {
+  @apply bg-header_bg w-[inherit] fixed top-0 left-0 right-0 z-[9999]
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.__columns__ {
+  @apply w-[inherit] h-fit bg-transparent flex pt-[1.5rem] px-[32px] max-md:pt-[10rem] max-md:px-1 max-md:flex-col justify-center
+}
+.PROFILE_ERROR {
+  @apply text-[12px] text-red-500
+}
+.PROFILE_ERROR_CONTENT {
+  @apply text-inherit
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@media (width <= 780px) {
+  html, body {
+    min-width: 100%;
   }
 }
