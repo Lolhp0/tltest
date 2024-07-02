@@ -6,7 +6,7 @@ import { getAllUsers } from "@/utils";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
-export default function Home() {
+export default function page() {
   const lastElement = useRef<HTMLDivElement | null>(null);
   const observer = useRef<IntersectionObserver | null>(null);
   const [isIntersecting, setIsIntersecting] = useState<boolean>(false);

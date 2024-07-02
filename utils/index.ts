@@ -5,6 +5,6 @@ export function getUser(username:string, region:string, rank?:string, tier?:stri
 }
 
 export function getAllUsers(){
-    const allPlayers = [...t1Players, ...t2Players, ...t3Players, ...t4Players, ...t5Players, ...subhumans];
+    const allPlayers = [...t1Players, ...t2Players, ...t3Players, ...t4Players, ...t5Players];
     return allPlayers
 }
